@@ -39,8 +39,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/markson.jpeg",
-        width: 1200,
-        height: 1600,
+        width: 709,
+        height: 945,
         alt: "Markson César"
       }
     ],
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     images: ["/images/markson.jpeg"]
   },
   icons: {
-    icon: "/favicon.png"
+    icon: "/favicon.svg"
   }
 };
 

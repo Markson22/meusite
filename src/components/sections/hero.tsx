@@ -69,11 +69,11 @@ export function Hero() {
           <div className="overflow-hidden rounded-lg border border-slate-200 bg-slate-100 shadow-2xl shadow-slate-900/10 dark:border-white/10 dark:bg-white/[0.04] dark:shadow-cyan-950/20">
             <Image
               alt="Retrato de Markson César"
-              className="aspect-[4/5] h-auto w-full object-cover"
-              height={1100}
+              className="aspect-[709/945] h-auto w-full object-cover"
+              height={945}
               priority
               src="/images/markson.jpeg"
-              width={880}
+              width={709}
             />
           </div>
           <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
