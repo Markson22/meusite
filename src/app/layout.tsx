@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     siteName: "Markson César",
     images: [
       {
-        url: "/images/markson.jpeg",
-        width: 709,
-        height: 945,
+        url: "/images/markson.png",
+        width: 1122,
+        height: 1402,
         alt: "Markson César"
       }
     ],
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Markson César | AI Engineer",
     description,
-    images: ["/images/markson.jpeg"]
+    images: ["/images/markson.png"]
   },
   icons: {
     icon: "/favicon.svg"
