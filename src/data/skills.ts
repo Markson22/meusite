@@ -11,7 +11,7 @@ export const skills: SkillGroup[] = [
   },
   {
     title: "Data",
-    items: ["SQL", "BigQuery", "Pandas", "Power BI", "Excel"]
+    items: ["SQL", "BigQuery", "Databricks", "Pandas", "Power BI", "Excel"]
   },
   {
     title: "Cloud & Engineering",

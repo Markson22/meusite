@@ -2,6 +2,50 @@ import type { Project } from "@/types/site";
 
 export const projects: Project[] = [
   {
+    slug: "notebooks-vendidos-databricks",
+    title: "Análise de Notebooks Vendidos",
+    label: "Data Analytics & Databricks",
+    summary:
+      "Notebook publicado no Databricks para análise de vendas de notebooks, com foco em exploração, tratamento e leitura dos dados.",
+    problem:
+      "Dados de vendas precisam ser organizados e analisados para revelar padrões de desempenho e apoiar decisões comerciais.",
+    solution:
+      "Construção de um notebook analítico no Databricks, reunindo etapas de exploração e análise em um material público e navegável.",
+    pipeline: ["Dataset de vendas", "Exploração", "Tratamento", "Análise", "Notebook publicado"],
+    technologies: ["Databricks", "Python", "SQL", "Data Analytics"],
+    results: [
+      "Notebook público disponível para consulta.",
+      "Projeto real demonstrando fluxo de análise em ambiente Databricks."
+    ],
+    links: {
+      demo: "https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2415211214737103/4263913259095206/2054107110425542/latest.html"
+    },
+    featured: true,
+    status: "Publicado"
+  },
+  {
+    slug: "dashboard-power-bi",
+    title: "Dashboard publicado em Power BI",
+    label: "Business Intelligence",
+    summary:
+      "Relatório público desenvolvido no Power BI para visualização interativa de dados e acompanhamento de indicadores.",
+    problem:
+      "Indicadores precisam ser apresentados de forma visual, navegável e acessível para facilitar análise e acompanhamento.",
+    solution:
+      "Criação e publicação de um relatório no Power BI, permitindo exploração interativa dos dados por meio de visualizações.",
+    pipeline: ["Fonte de dados", "Modelagem", "Visualizações", "Publicação", "Relatório interativo"],
+    technologies: ["Power BI", "Data Visualization", "BI"],
+    results: [
+      "Relatório público disponível via Power BI.",
+      "Projeto real demonstrando construção e publicação de dashboards."
+    ],
+    links: {
+      demo: "https://app.powerbi.com/view?r=eyJrIjoiNmFiY2FjYWEtYzkyMy00ZmFhLTg4ODEtOTk3NjFjNjdjY2E1IiwidCI6ImMyMjI5YzM2LTQ5ZDgtNDBlOC1iZGJlLWU2MzYwZGI2ODA4ZCJ9"
+    },
+    featured: true,
+    status: "Publicado"
+  },
+  {
     slug: "apis-rest-integracao-sistemas",
     title: "APIs REST para integração de sistemas",
     label: "Backend & AI Integration",

@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 import { TechBadge } from "@/components/ui/tech-badge";
@@ -53,12 +53,13 @@ export function ProjectCard({ project }: { project: Project }) {
         ) : null}
         {project.links?.demo ? (
           <a
-            className="text-sm font-medium text-slate-500 transition hover:text-slate-950 dark:text-slate-400 dark:hover:text-white"
+            className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition hover:text-slate-950 dark:text-slate-400 dark:hover:text-white"
             href={project.links.demo}
             rel="noreferrer"
             target="_blank"
           >
             Demo
+            <ExternalLink aria-hidden className="size-3.5" />
           </a>
         ) : null}
       </div>

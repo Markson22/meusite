@@ -1,4 +1,4 @@
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, CheckCircle2, ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -79,6 +79,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <TechBadge key={technology}>{technology}</TechBadge>
           ))}
         </div>
+
+        {project.links?.demo ? (
+          <div className="mt-8">
+            <a
+              className={cn(buttonVariants({ variant: "primary" }))}
+              href={project.links.demo}
+              rel="noreferrer"
+              target="_blank"
+            >
+              Abrir projeto publicado
+              <ExternalLink aria-hidden className="size-4" />
+            </a>
+          </div>
+        ) : null}
 
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           <CaseBlock title="Problema" value={project.problem} />

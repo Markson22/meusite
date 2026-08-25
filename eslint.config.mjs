@@ -8,7 +8,8 @@ const eslintConfig = [
       "out/**",
       "build/**",
       "next-env.d.ts",
-      "kards-master/**"
+      "kards-master/**",
+      "Mark/**"
     ]
   }
 ];
