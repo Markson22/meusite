@@ -105,20 +105,62 @@ export const projects: Project[] = [
   },
   {
     slug: "computer-vision-lab",
-    title: "Computer Vision Lab",
+    title: "Football Vision Analytics",
     label: "AI & Computer Vision",
     summary:
-      "Espaço preparado para documentar experimentos e aplicações de visão computacional com dados, inferência e integração.",
+      "Visão computacional aplicada à análise de partidas de futebol.",
+    description:
+      "Football Vision Analytics é um projeto de visão computacional desenvolvido em Python para processar vídeos de partidas de futebol. O pipeline detecta elementos da partida, rastreia jogadores, classifica atletas por equipe, transforma posições da câmera para uma representação do campo e extrai informações como estimativa de velocidade.",
     problem:
-      "Projetos de visão computacional precisam ser apresentados como soluções completas, indo além da execução isolada de um modelo.",
+      "Vídeos de partidas de futebol exigem processamento automatizado para identificar elementos da partida e transformar movimentos em informações analisáveis.",
     solution:
-      "Estrutura de case study para registrar dataset, preparação, abordagem, inferência, limitações e próximos passos conforme os projetos forem publicados.",
-    pipeline: ["Imagem ou vídeo", "Preprocessing", "Modelo", "Inferência", "API ou aplicação"],
-    technologies: ["Python", "Computer Vision", "Machine Learning"],
-    results: [
-      "Estrutura pronta para receber projetos reais sem inventar métricas ou tecnologias."
+      "Pipeline em Python que processa os frames, detecta e rastreia elementos da partida, classifica equipes, projeta posições no campo e estima velocidades.",
+    pipeline: [
+      "Vídeo de partida",
+      "Leitura frame a frame",
+      "Detecção com YOLO",
+      "Tracking e pós-processamento",
+      "Classificação, perspectiva e análise",
+      "Anotação visual",
+      "Vídeo processado"
     ],
-    status: "Em documentação"
+    technologies: ["Python", "OpenCV", "YOLO", "Ultralytics", "ByteTrack", "PyTorch", "Supervision"],
+    results: [
+      "Detecção de jogadores, goleiros, árbitros e bola.",
+      "Rastreamento de jogadores com ByteTrack.",
+      "Rastreamento da bola.",
+      "Classificação dos jogadores por equipe.",
+      "Transformação de perspectiva.",
+      "Visualização em radar/campo 2D.",
+      "Estimativa de velocidade dos jogadores em km/h.",
+      "Geração de vídeo processado com anotações."
+    ],
+    metrics: [
+      "Distância percorrida por jogador.",
+      "Posse de bola.",
+      "Mapas de calor.",
+      "Estatísticas agregadas.",
+      "Exportação CSV/JSON."
+    ],
+    metricsTitle: "Roadmap",
+    videos: [
+      {
+        title: "Player Detection & Tracking",
+        description:
+          "Detecção e rastreamento de jogadores durante uma partida utilizando Computer Vision. O pipeline processa os frames do vídeo e acompanha os objetos detectados ao longo da sequência.",
+        embedUrl: "https://www.youtube.com/embed/YyxMamOyAW8"
+      },
+      {
+        title: "Player Tracking & Speed Estimation",
+        description:
+          "Demonstração do rastreamento dos jogadores e da estimativa de velocidade individual em km/h a partir da movimentação observada durante a partida.",
+        embedUrl: "https://www.youtube.com/embed/iZhb7wF2aXc"
+      }
+    ],
+    links: {
+      github: "https://github.com/Markson22/Football-Vision-Analytics"
+    },
+    status: "Publicado"
   }
 ];
 

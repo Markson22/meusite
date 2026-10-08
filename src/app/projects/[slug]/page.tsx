@@ -73,6 +73,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
           {project.summary}
         </p>
+        {project.description ? (
+          <p className="mt-4 text-base leading-8 text-slate-600 dark:text-slate-300">
+            {project.description}
+          </p>
+        ) : null}
 
         <div className="mt-8 flex flex-wrap gap-2">
           {project.technologies.map((technology) => (
@@ -80,8 +85,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           ))}
         </div>
 
-        {project.links?.demo ? (
-          <div className="mt-8">
+        {project.links?.demo || project.links?.github ? (
+          <div className="mt-8 flex flex-wrap gap-3">
+            {project.links?.github ? (
+              <a
+                className={cn(buttonVariants({ variant: "secondary" }))}
+                href={project.links.github}
+                rel="noreferrer"
+                target="_blank"
+              >
+                Ver no GitHub
+                <ExternalLink aria-hidden className="size-4" />
+              </a>
+            ) : null}
+            {project.links?.demo ? (
             <a
               className={cn(buttonVariants({ variant: "primary" }))}
               href={project.links.demo}
@@ -91,6 +108,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               Abrir projeto publicado
               <ExternalLink aria-hidden className="size-4" />
             </a>
+            ) : null}
           </div>
         ) : null}
 
@@ -119,9 +137,41 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <ListBlock items={project.results} title="Resultados" />
           <ListBlock
             items={project.metrics?.length ? project.metrics : ["Métricas adicionais serão adicionadas apenas quando houver documentação real."]}
-            title="Métricas"
+            title={project.metricsTitle ?? "Métricas"}
           />
         </section>
+
+        {project.videos?.length ? (
+          <section className="mt-12">
+            <h2 className="text-xl font-semibold text-slate-950 dark:text-white">Vídeos</h2>
+            <div className="mt-5 grid gap-5 md:grid-cols-2">
+              {project.videos.map((video) => (
+                <article
+                  className="overflow-hidden rounded-lg border border-slate-200 bg-slate-50 dark:border-white/10 dark:bg-white/[0.035]"
+                  key={video.embedUrl}
+                >
+                  <div className="aspect-video">
+                    <iframe
+                      allowFullScreen
+                      className="size-full"
+                      loading="lazy"
+                      src={video.embedUrl}
+                      title={video.title}
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold text-slate-950 dark:text-white">
+                      {video.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                      {video.description}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
       </section>
     </main>
   );
