@@ -1,4 +1,4 @@
-import { ArrowDown, Download, GitBranch, Network } from "lucide-react";
+import { ArrowDown, Download } from "lucide-react";
 import Image from "next/image";
 
 import { SocialLinks } from "@/components/layout/social-links";
@@ -33,24 +33,7 @@ export function Hero() {
               Ver projetos
               <ArrowDown aria-hidden className="size-4" />
             </a>
-            <a
-              className={cn(buttonVariants({ variant: "secondary" }))}
-              href={profile.github}
-              rel="noreferrer"
-              target="_blank"
-            >
-              <GitBranch aria-hidden className="size-4" />
-              GitHub
-            </a>
-            <a
-              className={cn(buttonVariants({ variant: "secondary" }))}
-              href={profile.linkedin}
-              rel="noreferrer"
-              target="_blank"
-            >
-              <Network aria-hidden className="size-4" />
-              LinkedIn
-            </a>
+            <SocialLinks />
             {profile.resume ? (
               <a className={cn(buttonVariants({ variant: "secondary" }))} href={profile.resume}>
                 <Download aria-hidden className="size-4" />
@@ -59,9 +42,6 @@ export function Hero() {
             ) : null}
           </div>
 
-          <div className="mt-9">
-            <SocialLinks />
-          </div>
         </div>
 
         <div className="relative mx-auto w-full max-w-sm lg:max-w-md">
