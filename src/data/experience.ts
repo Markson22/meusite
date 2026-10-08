@@ -35,7 +35,7 @@ export const experiences: Experience[] = [
 export const education = {
   institution: "UNIFIN",
   course: "Análise e Desenvolvimento de Sistemas",
-  period: "Set 2023 - Presente",
+  period: "Set 2023 - Jan 2026",
   summary:
     "Formação voltada a programação, bancos de dados, engenharia de software, segurança da informação e redes de computadores."
 };
